@@ -9,7 +9,7 @@ npm install --save react-star-rating-element
 ```
 ### Demo Example Image
 
-![](https://ibb.co/LvPnHS0)
+![](https://imgur.com/a/aQyFqkU)
 
 ## Usage
 
