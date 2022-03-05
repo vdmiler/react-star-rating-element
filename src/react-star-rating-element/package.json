@@ -1,6 +1,6 @@
 {
   "name": "react-star-rating-element",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A customizable star rating component for selecting x stars or visualizing x stars",
   "main": "dist/index.cjs.js",
   "scripts": {
@@ -27,6 +27,10 @@
     "svg icons",
     "react star rating component"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vdmiler/react-star-rating-element"
+  },
   "author": "Miler Vadim <vdmiler1985@gmail.com> (https://github.com/vdmiler)",
   "license": "BSD-3-Clause",
   "devDependencies": {
