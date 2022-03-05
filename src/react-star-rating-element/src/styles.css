@@ -1,0 +1,15 @@
+.widget-container {
+  display: flex;
+}
+
+.widget-label {
+}
+
+.widget-label svg {
+  cursor: pointer;
+  transition: fill 200ms;
+}
+
+.widget-input {
+  display: none;
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import StarRating from "./react-star-rating-element/src/starRating";
+import "./App.css";
 
 function App() {
+  const [rating, setRating] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <div className="Wrapper">
+        <StarRating
+          rating={rating}
+          changeRating={setRating}
+          starEmptyColor="#999999"
+          starSpacing="2px"
+          starDimension={30}
+        />
+        <p className="Indicator">
+          The rating is <span>{rating}</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
