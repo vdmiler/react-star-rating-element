@@ -7,6 +7,9 @@
 ```shell
 npm install --save react-star-rating-element
 ```
+### Demo Example Image
+
+![](https://user-images.githubusercontent.com/64083482/156881983-e806302e-7786-47cc-81d6-9401c0e4d141.gif)
 
 ## Usage
 
