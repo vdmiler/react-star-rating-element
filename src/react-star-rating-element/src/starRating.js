@@ -7,44 +7,50 @@ import "./styles.css";
 const StarRating = ({
   numberOfStars = 5,
   starRatedColor,
-  starEmptyColor = "#000",
+  starEmptyColor = "#999999",
   starStroke,
   svgIconPath,
   starDimension,
-  starSpacing,
-  rating,
+  starSpacing = 2,
+
+  name = "rating",
+  ratingValue,
   changeRating,
 }) => {
   const [hover, setHover] = useState(null);
   return (
     <div className="widget-container">
       {Array.from({ length: numberOfStars }).map((_, i) => {
-        const ratingValue = i + 1;
+        const currentRating = i + 1;
         return (
           <div
-            className="widget-label"
-            style={{ padding: `0 ${starSpacing}` }}
             key={i + Math.random()}
-            onClick={() => changeRating(ratingValue)}
-            onMouseEnter={() => setHover(ratingValue)}
+            className="widget-label"
+            style={{
+              padding: `0 ${starSpacing / 2}px`,
+              width: starDimension,
+              height: starDimension,
+            }}
+            onClick={() => changeRating(currentRating)}
+            onMouseEnter={() => setHover(currentRating)}
             onMouseLeave={() => setHover(null)}
           >
             <input
               className="widget-input"
               type="radio"
-              name="rating"
-              value={ratingValue}
+              name={name}
+              value={currentRating}
             />
             <RatingIcon
               fill={
-                ratingValue <= (hover || rating)
+                currentRating <= (hover || ratingValue)
                   ? starRatedColor
                   : starEmptyColor
               }
+              svgIconPath={svgIconPath}
               stroke={starStroke}
               width={starDimension}
               height={starDimension}
-              svgIconPath={svgIconPath}
             />
           </div>
         );

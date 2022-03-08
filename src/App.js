@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <div className="Wrapper">
         <StarRating
-          rating={rating}
+          ratingValue={rating}
           changeRating={setRating}
           starEmptyColor="#999999"
-          starSpacing="2px"
+          starSpacing={10}
           starDimension={30}
         />
         <p className="Indicator">
